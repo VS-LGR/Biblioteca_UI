@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca UI — Livro de projetos 01</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="pb-skip" href="#pb-main">Ir para o livro</a>
+
+    <header class="pb-demo-header">
+      <p class="pb-demo-header__tag">Biblioteca UI · layout</p>
+      <h1 class="pb-demo-header__title">Livro de projetos 01</h1>
+      <p class="pb-demo-header__lead">
+        Demo com dois spreads. No desktop usa setas do teclado para mudar de
+        spread; nos hotspots usa Tab e Enter. Em ecrã estreito alterna entre
+        vista do projeto e texto.
+      </p>
+    </header>
+
+    <main id="pb-main" class="pb-demo-main" tabindex="-1">
+      <script type="application/json" id="project-book-data">
+        {
+          "bookLabelPt": "Livro de projetos, demonstração interativa",
+          "bookLabelEn": "Project book, interactive demo",
+          "spreads": [
+            {
+              "announcerPt": "Spread 1 de 2. Console pixel.",
+              "announcerEn": "Spread 1 of 2. Pixel console.",
+              "projectTitle": "Console Pixel",
+              "leftHeadingPt": "Vista do projeto",
+              "rightHeadingPt": "Notas",
+              "hotspots": [
+                {
+                  "id": "hud",
+                  "label": "HUD",
+                  "topPct": 10,
+                  "leftPct": 12,
+                  "widthPct": 36,
+                  "heightPct": 22
+                },
+                {
+                  "id": "map",
+                  "label": "Mapa",
+                  "topPct": 48,
+                  "leftPct": 52,
+                  "widthPct": 38,
+                  "heightPct": 32
+                },
+                {
+                  "id": "input",
+                  "label": "Input",
+                  "topPct": 72,
+                  "leftPct": 14,
+                  "widthPct": 28,
+                  "heightPct": 16
+                }
+              ],
+              "blocks": [
+                {
+                  "ref": "hud",
+                  "titlePt": "Camada HUD",
+                  "bodyPt": "A barra superior concentra estado, vidas e pontuação. Ao selecionar este ponto no layout, esta secção fica realçada para cruzar imagem e texto."
+                },
+                {
+                  "ref": "map",
+                  "titlePt": "Mundo e navegação",
+                  "bodyPt": "O painel central representa o mapa jogável. O destaque ajuda a explicar regras de colisão e câmara sem repetir o mesmo parágrafo em todo o portfólio."
+                },
+                {
+                  "ref": "input",
+                  "titlePt": "Comandos",
+                  "bodyPt": "Zona de input: teclas ou toque. Útil para documentar controlos e acessibilidade (atalhos, remapeamento)."
+                }
+              ]
+            },
+            {
+              "announcerPt": "Spread 2 de 2. Painel de dados.",
+              "announcerEn": "Spread 2 of 2. Data panel.",
+              "projectTitle": "Painel de dados",
+              "leftHeadingPt": "Vista do projeto",
+              "rightHeadingPt": "Notas",
+              "hotspots": [
+                {
+                  "id": "chart",
+                  "label": "Gráfico",
+                  "topPct": 18,
+                  "leftPct": 10,
+                  "widthPct": 42,
+                  "heightPct": 40
+                },
+                {
+                  "id": "table",
+                  "label": "Tabela",
+                  "topPct": 58,
+                  "leftPct": 18,
+                  "widthPct": 70,
+                  "heightPct": 28
+                }
+              ],
+              "blocks": [
+                {
+                  "ref": "chart",
+                  "titlePt": "Visualização",
+                  "bodyPt": "O gráfico resume tendências. Liga o mock visual à narrativa do caso de estudo."
+                },
+                {
+                  "ref": "table",
+                  "titlePt": "Dados brutos",
+                  "bodyPt": "A tabela mostra linhas detalhadas. Ideal para explicar métricas ou exportações."
+                }
+              ]
+            }
+          ]
+        }
+      </script>
+
+      <div id="project-book-root" class="project-book-mount"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

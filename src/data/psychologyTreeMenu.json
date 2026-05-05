@@ -1,0 +1,39 @@
+[
+  {
+    "id": "inicio",
+    "label": "Início",
+    "href": "/",
+    "position": "topCenter",
+    "state": "active"
+  },
+  {
+    "id": "terapia-individual",
+    "label": "Terapia Individual",
+    "href": "/terapia-individual",
+    "position": "leftTop"
+  },
+  {
+    "id": "terapia-casal",
+    "label": "Terapia de Casal",
+    "href": "/terapia-casal",
+    "position": "rightTop"
+  },
+  {
+    "id": "ansiedade",
+    "label": "Ansiedade",
+    "href": "/especialidades/ansiedade",
+    "position": "leftMid"
+  },
+  {
+    "id": "depressao",
+    "label": "Depressão",
+    "href": "/especialidades/depressao",
+    "position": "rightMid"
+  },
+  {
+    "id": "agendamento",
+    "label": "Agendamento",
+    "href": "/agendamento",
+    "position": "bottomRight"
+  }
+]

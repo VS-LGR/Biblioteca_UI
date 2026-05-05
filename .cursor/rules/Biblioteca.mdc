@@ -1,0 +1,106 @@
+---
+description: 
+globs: C:\Users\lukag\OneDrive\Área de Trabalho\Biblioteca UI
+alwaysApply: false
+---
+
+Você está atuando em um projeto chamado Biblioteca UI, focado na criação de componentes front-end reutilizáveis, microinterações, animações, menus, headers e padrões visuais que possam ser reaproveitados em diferentes projetos.
+
+REGRAS GERAIS DO PROJETO
+
+- Priorize código limpo, modular, responsivo e reutilizável.
+- Todo componente deve ser fácil de copiar, adaptar e reaproveitar em outros projetos.
+- Não crie soluções presas a um único layout, cliente ou contexto específico.
+- Evite retrabalho e não reescreva código já aprovado sem justificativa técnica clara.
+- Prefira soluções simples, elegantes e robustas.
+- Use HTML semântico, CSS moderno e JavaScript modular quando aplicável.
+- Caso o projeto use React, Next.js, TypeScript ou Tailwind, respeite a stack existente.
+- Não adicione bibliotecas externas sem necessidade real.
+- Priorize animações com CSS sempre que possível.
+- Use JavaScript apenas quando a interação exigir controle de estado, clique, scroll, menu, acessibilidade ou lógica dinâmica.
+
+PADRÃO DE COMPONENTES
+
+Todo componente criado deve ser:
+
+- Responsivo para mobile, tablet e desktop.
+- Acessível, com foco visível, aria-labels e navegação por teclado quando necessário.
+- Organizado em arquivos claros.
+- Nomeado com classes, funções e componentes fáceis de entender.
+- Documentado de forma simples.
+- Preparado para customização rápida.
+- Compatível com reutilização em landing pages, portfólios, sites institucionais e sistemas.
+
+MICROINTERAÇÕES E ANIMAÇÕES
+
+Ao criar microinterações ou animações:
+
+- Use animações suaves, intencionais e sem exagero.
+- Priorize propriedades performáticas como transform e opacity.
+- Evite animar width, height, top, left e margin quando puder usar transform.
+- Evite animações que causem layout shift.
+- Inclua suporte a prefers-reduced-motion quando fizer sentido.
+- Garanta estados de hover, focus, active e disabled quando aplicável.
+- A animação deve reforçar a experiência do usuário, não competir com o conteúdo.
+
+RESPONSIVIDADE
+
+Sempre considerar:
+
+- Mobile first quando fizer sentido.
+- Menus funcionais em telas pequenas.
+- Botões com área de toque confortável.
+- Espaçamentos consistentes.
+- Tipografia legível.
+- Layout flexível.
+- Sem quebras visuais em diferentes larguras de tela.
+
+ESTRUTURA RECOMENDADA
+
+Sempre que criar um novo componente, organize de forma parecida com:
+
+/components
+  /headers
+  /menus
+  /buttons
+  /cards
+  /forms
+  /navigation
+  /feedback
+  /animations
+  /microinteractions
+  /layout
+
+Cada componente deve conter, quando aplicável:
+
+- Arquivo principal do componente.
+- Arquivo de estilos.
+- Arquivo de script ou lógica.
+- README.md explicando uso, personalização e dependências.
+
+DOCUMENTAÇÃO OBRIGATÓRIA
+
+Para cada componente criado, explicar:
+
+- Nome do componente.
+- Onde usar.
+- Como reutilizar.
+- Como personalizar cores, tamanhos, espaçamentos e velocidade.
+- Quais arquivos fazem parte do componente.
+- Se depende ou não de JavaScript.
+- Cuidados de acessibilidade.
+- Cuidados de responsividade.
+- Possíveis variações futuras.
+
+COMPORTAMENTO ESPERADO
+
+Antes de desenvolver, analise:
+
+- Qual problema o componente resolve.
+- Se ele realmente precisa de JavaScript.
+- Como deixá-lo mais reutilizável.
+- Como evitar acoplamento ao projeto atual.
+- Como manter o código simples e profissional.
+- Como garantir responsividade e acessibilidade.
+
+Nunca entregue apenas uma ideia visual. Sempre entregue uma solução usável, organizada e pronta para reaproveitamento.

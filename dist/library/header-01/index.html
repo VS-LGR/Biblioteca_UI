@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Biblioteca UI — demo do header responsivo com menu mobile animado."
+    />
+    <title>Biblioteca UI — Header 01</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../buttons/button-01/style.css" />
+  </head>
+  <body>
+    <a class="ui-skip-link" href="#conteudo-principal">Ir para o conteúdo</a>
+
+    <header class="ui-header" id="site-header" role="banner">
+      <div class="ui-header__inner">
+        <a class="ui-header__brand" href="#inicio">Biblioteca UI</a>
+
+        <button
+          type="button"
+          class="ui-header__menu-button"
+          id="menu-toggle"
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Abrir menu de navegação"
+        >
+          <span class="ui-header__icon-line" aria-hidden="true"></span>
+          <span class="ui-header__icon-line" aria-hidden="true"></span>
+          <span class="ui-header__icon-line" aria-hidden="true"></span>
+        </button>
+
+        <nav
+          class="ui-header__nav"
+          id="primary-menu"
+          aria-label="Navegação principal"
+        >
+          <button
+            type="button"
+            class="ui-header__drawer-close"
+            id="drawer-close"
+            aria-label="Fechar menu"
+          >
+            <span aria-hidden="true">Fechar</span>
+          </button>
+          <ul class="ui-header__list">
+            <li><a class="ui-header__link" href="#inicio">Início</a></li>
+            <li>
+              <a class="ui-header__link" href="#componentes">Componentes</a>
+            </li>
+            <li>
+              <a class="ui-header__link" href="#documentacao">Documentação</a>
+            </li>
+            <li><a class="ui-header__link" href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        class="ui-header__backdrop"
+        id="menu-backdrop"
+        aria-hidden="true"
+      ></div>
+    </header>
+
+    <div class="ui-biblioteca-page">
+      <main id="conteudo-principal" class="ui-demo-main" tabindex="-1">
+        <section class="ui-hero" id="inicio" aria-labelledby="ui-hero-title">
+          <div class="ui-hero__inner">
+            <p class="ui-hero__badge">Biblioteca em construção</p>
+            <h1 id="ui-hero-title" class="ui-hero__title">
+              Componentes front-end reutilizáveis, com cuidado em movimento e
+              acessibilidade
+            </h1>
+            <p class="ui-hero__lead">
+              Esta página apresenta o <strong>Header 01</strong> (fixo, menu
+              mobile em gaveta, mudança ao scroll) e o <strong>Button 01</strong>
+              (variantes primária e fantasma). Role para testar o header; em
+              telas pequenas, abra o menu pelo ícone.
+            </p>
+            <div class="ui-hero__actions">
+              <a class="ui-button ui-button--primary ui-button--lg" href="#componentes">
+                Ver componentes
+              </a>
+              <a
+                class="ui-button ui-button--ghost ui-button--lg"
+                href="#documentacao"
+              >
+                Como usar na sua base
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="ui-section ui-section--surface"
+          id="componentes"
+          aria-labelledby="ui-sec-comp-title"
+        >
+          <div class="ui-section__inner">
+            <h2 id="ui-sec-comp-title" class="ui-section__title">
+              O que já está na biblioteca
+            </h2>
+            <p class="ui-section__intro">
+              Cada peça vive na pasta <code>components/</code>, com HTML, CSS e
+              JS separados quando faz sentido, mais um README para copiar e
+              adaptar em landings, portfólios ou sistemas.
+            </p>
+            <ul class="ui-card-grid">
+              <li class="ui-card">
+                <span class="ui-card__tag">Headers</span>
+                <h3 class="ui-card__name">Header 01</h3>
+                <p class="ui-card__text">
+                  Navegação horizontal no desktop, gaveta animada no mobile,
+                  backdrop, Escape e foco gerido. É o header desta própria demo.
+                </p>
+              </li>
+              <li class="ui-card">
+                <span class="ui-card__tag">Buttons</span>
+                <h3 class="ui-card__name">Button 01</h3>
+                <p class="ui-card__text">
+                  Primário e fantasma, com estados de hover, foco e toque. Usa
+                  os tokens CSS globais da página.
+                </p>
+              </li>
+              <li class="ui-card ui-card--soon">
+                <span class="ui-card__tag">A seguir</span>
+                <h3 class="ui-card__name">A tua lista</h3>
+                <p class="ui-card__text">
+                  Enviarás os nomes dos próximos componentes; cada um seguirá a
+                  mesma ideia: independente, documentado e fácil de personalizar.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section
+          class="ui-section"
+          id="documentacao"
+          aria-labelledby="ui-sec-doc-title"
+        >
+          <div class="ui-section__inner ui-section__inner--narrow">
+            <h2 id="ui-sec-doc-title" class="ui-section__title">
+              Como usar esta demo
+            </h2>
+            <ol class="ui-steps">
+              <li>
+                Copia a pasta do componente (por exemplo
+                <code>headers/header-01</code>) para o teu projeto.
+              </li>
+              <li>
+                Ajusta links, marca e tokens em <code>:root</code> no CSS, sem
+                alterar a estrutura sem necessidade.
+              </li>
+              <li>
+                Para o botão, inclui <code>buttons/button-01/style.css</code> após
+                os tokens, como nesta página.
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section
+          class="ui-section ui-section--surface"
+          id="contato"
+          aria-labelledby="ui-sec-cta-title"
+        >
+          <div class="ui-section__inner ui-cta-panel">
+            <div class="ui-cta-panel__text">
+              <h2 id="ui-sec-cta-title" class="ui-section__title ui-section__title--flush">
+                Próximo passo
+              </h2>
+              <p class="ui-cta-panel__lead">
+                Quando enviares a lista de componentes a criar, cada um será
+                acrescentado aqui com a mesma qualidade: responsivo, acessível e
+                pronto para reutilizar.
+              </p>
+            </div>
+            <div class="ui-cta-panel__action">
+              <button type="button" class="ui-button ui-button--primary ui-button--lg" disabled>
+                Lista em breve
+              </button>
+              <p class="ui-cta-panel__hint">
+                Botão desativado só como exemplo de estado; substitui por um
+                link real quando tiveres formulário ou repositório.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="ui-footer" role="contentinfo">
+        <div class="ui-footer__inner">
+          <p class="ui-footer__brand">Biblioteca UI</p>
+          <p class="ui-footer__note">
+            Abre este HTML diretamente ou pré-visualiza no hub da Biblioteca UI
+            (<code>npm run dev</code>) — cópia servida em
+            <code>public/library/header-01/</code> (comando
+            <code>npm run library:sync</code>).
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

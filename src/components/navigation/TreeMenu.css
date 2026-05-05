@@ -1,0 +1,132 @@
+.treeMenu {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  color: var(--tree-text);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 16px 38px rgba(67, 32, 38, 0.14);
+}
+
+.treeMenu__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+}
+
+.treeMenu__trunk {
+  fill: url(#trunkGradient);
+}
+
+.treeMenu__groundShadow {
+  fill: color-mix(in srgb, var(--tree-trunk) 30%, transparent);
+}
+
+.treeMenu__branch {
+  fill: none;
+  stroke: color-mix(in srgb, var(--tree-branch) 88%, #1c0806);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.treeMenu__branch--back {
+  opacity: 0.45;
+}
+
+.treeMenu__branch--front {
+  opacity: 0.95;
+}
+
+.treeMenu__blossom {
+  fill: var(--tree-blossom);
+  opacity: 0.95;
+  filter: drop-shadow(0 1px 1px rgba(85, 27, 57, 0.22));
+  animation: blossomPulse 3.8s ease-in-out infinite;
+}
+
+.treeMenu__blossomSoft {
+  fill: var(--tree-blossom-soft);
+  opacity: 0.95;
+  animation: blossomPulse 4.6s ease-in-out infinite;
+}
+
+.treeMenu__blossomCore {
+  fill: color-mix(in srgb, var(--tree-blossom) 72%, #ffeaf2);
+  filter: drop-shadow(0 2px 2px rgba(79, 17, 46, 0.3));
+}
+
+.treeMenu__pollen {
+  fill: #f3d04e;
+}
+
+.treeMenu__nodesLayer {
+  position: absolute;
+  inset: 0;
+}
+
+.treeMenu__node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  padding: var(--tree-node-py) var(--tree-node-px);
+  border-radius: 999px;
+  font-size: var(--tree-font-size);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: color-mix(in srgb, var(--tree-blossom-soft) 75%, #ffffff);
+  color: var(--tree-text);
+  border: 1px solid color-mix(in srgb, var(--tree-blossom) 55%, #ffffff);
+  box-shadow: 0 8px 18px rgba(91, 33, 56, 0.22);
+  transition: transform 120ms ease, background-color 150ms ease, border-color 150ms ease, box-shadow 150ms ease;
+  white-space: nowrap;
+}
+
+.treeMenu__node:hover {
+  transform: translate(-50%, -50%) scale(1.04);
+  box-shadow: 0 12px 26px rgba(91, 33, 56, 0.3);
+}
+
+.treeMenu__node:focus-visible {
+  outline: 0;
+  border-color: var(--tree-focus);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tree-focus) 25%, transparent);
+}
+
+.treeMenu__node--active {
+  background: color-mix(in srgb, var(--tree-branch) 88%, #2d0d0c);
+  color: var(--tree-text-contrast);
+  border-color: color-mix(in srgb, var(--tree-blossom-soft) 40%, var(--tree-trunk));
+}
+
+.treeMenu__node--disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+@keyframes blossomPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@media (max-width: 900px) {
+  .treeMenu__node {
+    white-space: normal;
+    max-width: 155px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  .treeMenu__node {
+    font-size: calc(var(--tree-font-size) - 2px);
+    padding: calc(var(--tree-node-py) - 2px) calc(var(--tree-node-px) - 2px);
+  }
+}

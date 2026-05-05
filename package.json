@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "npm run library:sync",
     "dev": "vite",
+    "prebuild": "npm run library:sync",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
     "library:sync": "node scripts/sync-public-library.mjs"

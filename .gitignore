@@ -1,0 +1,43 @@
+# Dependências
+node_modules/
+
+# Build Vite
+dist/
+
+# Cópia gerada por `npm run library:sync` (fonte em `components/`)
+public/library/
+
+# TypeScript — caches de build incremental
+*.tsbuildinfo
+
+# Emissões acidentais do `tsc -b` no vite.config (só a fonte é `vite.config.ts`)
+vite.config.js
+vite.config.d.ts
+
+# Variáveis de ambiente (nunca commits com segredos)
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite — cache local
+.vite/
+
+# Testes / cobertura
+coverage/
+
+# SO
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editores (mantém extensões recomendadas se existirem)
+.idea/
+.vscode/*
+!.vscode/extensions.json

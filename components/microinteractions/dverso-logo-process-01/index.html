@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Biblioteca UI — ciclo clínico DVERSO com tooltips sobre a logo."
+    />
+    <title>Biblioteca UI — DVERSO processo 01</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="dlp-skip" href="#dlp-main">Ir para o processo</a>
+
+    <header class="dlp-demo-header">
+      <p class="dlp-demo-header__tag">Biblioteca UI · microinterações</p>
+      <h1 class="dlp-demo-header__title">Logo DVERSO — ciclo com tooltips</h1>
+      <p class="dlp-demo-header__lead">
+        Passe o cursor nos círculos da trilha (desktop) ou expanda cada etapa
+        na lista (telemóvel). Teclado: Tab para navegar, Escape para fechar o
+        painel em foco.
+      </p>
+    </header>
+
+    <main id="dlp-main" class="dlp" tabindex="-1">
+      <div class="dlp__inner">
+        <!-- Desktop / tablet: infográfico + hotspots -->
+        <figure
+          class="dlp-figure dlp-figure--desktop"
+          aria-label="Infográfico do processo clínico DVERSO"
+        >
+          <div class="dlp-canvas">
+            <img
+              class="dlp-canvas__img"
+              src="/aiAtivo%209LogoDverso.webp"
+              width="1200"
+              height="675"
+              alt="Trilha em forma de infinito triplo com as etapas do acompanhamento clínico DVERSO."
+              decoding="async"
+              fetchpriority="high"
+            />
+
+            <div class="dlp-hotspots" role="presentation">
+              <div
+                class="dlp-hotspot"
+                style="--dlp-hotspot-x: 10.5%; --dlp-hotspot-y: 10%"
+                data-dlp-step="1"
+              >
+                <button
+                  type="button"
+                  class="dlp-hotspot__trigger"
+                  id="dlp-trigger-1"
+                  aria-expanded="false"
+                  aria-controls="dlp-panel-1"
+                >
+                  <span class="dlp-hotspot__ring" aria-hidden="true"></span>
+                  <span class="dlp-visually-hidden">Passo 01 — Anamnese</span>
+                </button>
+                <div
+                  class="dlp-panel"
+                  id="dlp-panel-1"
+                  role="region"
+                  aria-labelledby="dlp-panel-1-title"
+                  aria-hidden="true"
+                >
+                  <p class="dlp-panel__step" id="dlp-panel-1-title">01 Anamnese</p>
+                  <p class="dlp-panel__text">
+                    Aprofundamos a história da criança, rotina, comunicação,
+                    escola e principais preocupações da família.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="dlp-hotspot"
+                style="--dlp-hotspot-x: 26.5%; --dlp-hotspot-y: 57%"
+                data-dlp-step="2"
+              >
+                <button
+                  type="button"
+                  class="dlp-hotspot__trigger"
+                  id="dlp-trigger-2"
+                  aria-expanded="false"
+                  aria-controls="dlp-panel-2"
+                >
+                  <span class="dlp-hotspot__ring" aria-hidden="true"></span>
+                  <span class="dlp-visually-hidden">Passo 02 — Vinculação</span>
+                </button>
+                <div
+                  class="dlp-panel"
+                  id="dlp-panel-2"
+                  role="region"
+                  aria-labelledby="dlp-panel-2-title"
+                  aria-hidden="true"
+                >
+                  <p class="dlp-panel__step" id="dlp-panel-2-title">02 Vinculação</p>
+                  <p class="dlp-panel__text">
+                    Construímos vínculo e observamos a criança em contexto
+                    natural para compreender suas habilidades e necessidades.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="dlp-hotspot"
+                style="--dlp-hotspot-x: 49.5%; --dlp-hotspot-y: 9.5%"
+                data-dlp-step="3"
+              >
+                <button
+                  type="button"
+                  class="dlp-hotspot__trigger"
+                  id="dlp-trigger-3"
+                  aria-expanded="false"
+                  aria-controls="dlp-panel-3"
+                >
+                  <span class="dlp-hotspot__ring" aria-hidden="true"></span>
+                  <span class="dlp-visually-hidden"
+                    >Passos 03 e 04 — Avaliação inicial</span
+                  >
+                </button>
+                <div
+                  class="dlp-panel"
+                  id="dlp-panel-3"
+                  role="region"
+                  aria-labelledby="dlp-panel-3-title"
+                  aria-hidden="true"
+                >
+                  <p class="dlp-panel__step" id="dlp-panel-3-title">
+                    03 e 04 Avaliação inicial
+                  </p>
+                  <p class="dlp-panel__text">
+                    Aplicamos os protocolos próprios da DVERSO para identificar
+                    déficits, barreiras de desenvolvimento, habilidades
+                    emergentes e comportamentos interferentes.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="dlp-hotspot"
+                style="--dlp-hotspot-x: 73.5%; --dlp-hotspot-y: 57%"
+                data-dlp-step="5"
+              >
+                <button
+                  type="button"
+                  class="dlp-hotspot__trigger"
+                  id="dlp-trigger-5"
+                  aria-expanded="false"
+                  aria-controls="dlp-panel-5"
+                >
+                  <span class="dlp-hotspot__ring" aria-hidden="true"></span>
+                  <span class="dlp-visually-hidden">Passo 05 — Escola</span>
+                </button>
+                <div
+                  class="dlp-panel"
+                  id="dlp-panel-5"
+                  role="region"
+                  aria-labelledby="dlp-panel-5-title"
+                  aria-hidden="true"
+                >
+                  <p
+                    class="dlp-panel__step dlp-panel__step--accent"
+                    id="dlp-panel-5-title"
+                  >
+                    05 Escola
+                  </p>
+                  <p class="dlp-panel__text">
+                    Conversamos com a escola para entender como a criança se
+                    comporta em outro contexto importante da rotina.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="dlp-hotspot"
+                style="--dlp-hotspot-x: 89%; --dlp-hotspot-y: 10%"
+                data-dlp-step="6"
+              >
+                <button
+                  type="button"
+                  class="dlp-hotspot__trigger"
+                  id="dlp-trigger-6"
+                  aria-expanded="false"
+                  aria-controls="dlp-panel-6"
+                >
+                  <span class="dlp-hotspot__ring" aria-hidden="true"></span>
+                  <span class="dlp-visually-hidden"
+                    >Passo 06 — Devolutiva e plano</span
+                  >
+                </button>
+                <div
+                  class="dlp-panel"
+                  id="dlp-panel-6"
+                  role="region"
+                  aria-labelledby="dlp-panel-6-title"
+                  aria-hidden="true"
+                >
+                  <p
+                    class="dlp-panel__step dlp-panel__step--accent"
+                    id="dlp-panel-6-title"
+                  >
+                    06 Devolutiva e plano
+                  </p>
+                  <p class="dlp-panel__text">
+                    Apresentamos os resultados à família e definimos o plano
+                    inicial de intervenção.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </figure>
+
+        <!-- Mobile: lista expansível -->
+        <section
+          class="dlp-mobile dlp-figure--mobile"
+          aria-label="Etapas do processo (vista em lista)"
+        >
+          <h2 class="dlp-mobile__title">Etapas do processo</h2>
+          <ol class="dlp-mobile__list">
+            <li class="dlp-mobile__item">
+              <button
+                type="button"
+                class="dlp-mobile__toggle"
+                aria-expanded="false"
+                aria-controls="dlp-mo-1"
+                id="dlp-mo-btn-1"
+              >
+                <span class="dlp-mobile__num">01</span>
+                <span class="dlp-mobile__label">Anamnese</span>
+              </button>
+              <div
+                class="dlp-mobile__panel"
+                id="dlp-mo-1"
+                role="region"
+                aria-labelledby="dlp-mo-btn-1"
+                hidden
+              >
+                <p>
+                  Aprofundamos a história da criança, rotina, comunicação,
+                  escola e principais preocupações da família.
+                </p>
+              </div>
+            </li>
+            <li class="dlp-mobile__item">
+              <button
+                type="button"
+                class="dlp-mobile__toggle"
+                aria-expanded="false"
+                aria-controls="dlp-mo-2"
+                id="dlp-mo-btn-2"
+              >
+                <span class="dlp-mobile__num">02</span>
+                <span class="dlp-mobile__label">Vinculação</span>
+              </button>
+              <div
+                class="dlp-mobile__panel"
+                id="dlp-mo-2"
+                role="region"
+                aria-labelledby="dlp-mo-btn-2"
+                hidden
+              >
+                <p>
+                  Construímos vínculo e observamos a criança em contexto
+                  natural para compreender suas habilidades e necessidades.
+                </p>
+              </div>
+            </li>
+            <li class="dlp-mobile__item">
+              <button
+                type="button"
+                class="dlp-mobile__toggle"
+                aria-expanded="false"
+                aria-controls="dlp-mo-3"
+                id="dlp-mo-btn-3"
+              >
+                <span class="dlp-mobile__num">03–04</span>
+                <span class="dlp-mobile__label">Avaliação inicial</span>
+              </button>
+              <div
+                class="dlp-mobile__panel"
+                id="dlp-mo-3"
+                role="region"
+                aria-labelledby="dlp-mo-btn-3"
+                hidden
+              >
+                <p>
+                  Aplicamos os protocolos próprios da DVERSO para identificar
+                  déficits, barreiras de desenvolvimento, habilidades
+                  emergentes e comportamentos interferentes.
+                </p>
+              </div>
+            </li>
+            <li class="dlp-mobile__item">
+              <button
+                type="button"
+                class="dlp-mobile__toggle"
+                aria-expanded="false"
+                aria-controls="dlp-mo-4"
+                id="dlp-mo-btn-4"
+              >
+                <span class="dlp-mobile__num">05</span>
+                <span class="dlp-mobile__label">Escola</span>
+              </button>
+              <div
+                class="dlp-mobile__panel"
+                id="dlp-mo-4"
+                role="region"
+                aria-labelledby="dlp-mo-btn-4"
+                hidden
+              >
+                <p>
+                  Conversamos com a escola para entender como a criança se
+                  comporta em outro contexto importante da rotina.
+                </p>
+              </div>
+            </li>
+            <li class="dlp-mobile__item">
+              <button
+                type="button"
+                class="dlp-mobile__toggle"
+                aria-expanded="false"
+                aria-controls="dlp-mo-5"
+                id="dlp-mo-btn-5"
+              >
+                <span class="dlp-mobile__num">06</span>
+                <span class="dlp-mobile__label">Devolutiva e plano</span>
+              </button>
+              <div
+                class="dlp-mobile__panel"
+                id="dlp-mo-5"
+                role="region"
+                aria-labelledby="dlp-mo-btn-5"
+                hidden
+              >
+                <p>
+                  Apresentamos os resultados à família e definimos o plano
+                  inicial de intervenção.
+                </p>
+              </div>
+            </li>
+          </ol>
+          <figure class="dlp-mobile__thumb" aria-hidden="true">
+            <img
+              src="/aiAtivo%209LogoDverso.webp"
+              width="600"
+              height="338"
+              alt=""
+              decoding="async"
+            />
+          </figure>
+        </section>
+
+        <section class="dlp-support" aria-label="Acompanhamento contínuo">
+          <div class="dlp-support__rail" aria-hidden="true">
+            <span class="dlp-support__rail-cap"></span>
+            <span class="dlp-support__rail-line"></span>
+            <span class="dlp-support__rail-cap"></span>
+          </div>
+          <div class="dlp-support__grid">
+            <article class="dlp-support__card dlp-support__card--deep">
+              <h2 class="dlp-support__title">Supervisão semanal</h2>
+              <p class="dlp-support__text">
+                Os atendimentos são acompanhados semanalmente pela supervisão,
+                com análise dos registros, revisão de vídeos e ajustes no plano
+                sempre que necessário.
+              </p>
+            </article>
+            <article class="dlp-support__card dlp-support__card--soft">
+              <h2 class="dlp-support__title">Reavaliação periódica</h2>
+              <p class="dlp-support__text">
+                Reavaliação a cada 6 meses ou a cada 3 meses em casos de
+                comportamentos complexos, interferentes ou de risco.
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>

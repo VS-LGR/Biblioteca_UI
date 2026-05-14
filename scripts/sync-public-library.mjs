@@ -63,3 +63,13 @@ console.log("written", path.relative(root, path.join(headerPub, "index.html")));
 const bookSrc = path.join(root, "components/layout/project-book-01");
 const bookPub = path.join(root, "public/library/project-book-01");
 copyDir(bookSrc, bookPub);
+
+const dversoSrc = path.join(
+  root,
+  "components/microinteractions/dverso-logo-process-01"
+);
+const dversoPub = path.join(
+  root,
+  "public/library/microinteractions/dverso-logo-process-01"
+);
+copyDir(dversoSrc, dversoPub);

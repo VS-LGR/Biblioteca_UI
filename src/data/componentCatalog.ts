@@ -124,6 +124,45 @@ export const COMPONENT_CATALOG: ComponentEntry[] = [
       },
     ],
   },
+  {
+    id: "dverso-logo-process-01",
+    categoryPt: "Microinterações",
+    categoryEn: "Microinteractions",
+    titlePt: "Logo DVERSO — ciclo com tooltips",
+    titleEn: "DVERSO logo — process cycle with tooltips",
+    descriptionPt:
+      "Cinco hotspots alinhados ao infográfico (03–04 num único ponto), painéis acima ou abaixo conforme crista ou vale da trilha, lista em ecrã estreito e cartões de supervisão/reavaliação com linha de ligação.",
+    descriptionEn:
+      "Five hotspots aligned to the infographic (03–04 merged), panels above or below peaks and valleys, small-screen list, supervision/re-evaluation cards with connector rail.",
+    tagsPt: ["HTML", "CSS", "JS", "Acessível", "Tooltip"],
+    tagsEn: ["HTML", "CSS", "JS", "Accessible", "Tooltip"],
+    demoUrl: "library/microinteractions/dverso-logo-process-01/index.html",
+    files: [
+      {
+        name: "index.html",
+        repoPath:
+          "components/microinteractions/dverso-logo-process-01/index.html",
+        ...role("Marcação e conteúdo das etapas", "Markup and step content"),
+      },
+      {
+        name: "style.css",
+        repoPath: "components/microinteractions/dverso-logo-process-01/style.css",
+        ...role("Tokens, layout, tooltips e responsividade", "Tokens, layout, tooltips, responsive"),
+      },
+      {
+        name: "script.js",
+        repoPath:
+          "components/microinteractions/dverso-logo-process-01/script.js",
+        ...role("Acordeão mobile, ARIA e Escape", "Mobile accordion, ARIA, Escape"),
+      },
+      {
+        name: "README.md",
+        repoPath:
+          "components/microinteractions/dverso-logo-process-01/README.md",
+        ...role("Documentação", "Documentation"),
+      },
+    ],
+  },
 ];
 
 export function categoryLabel(entry: ComponentEntry, lang: Lang): string {
